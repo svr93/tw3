@@ -1,0 +1,19 @@
+<div class="task-list-item" ng-class="{ translucent: $ctrl.item.completed }">
+    <label class="ib">
+        <input type="checkbox" ng-model="$ctrl.item.completed" class="ib">
+    </label><!--
+ --><div class="main-container ib">
+        <div class="title-container" ng-show="!$ctrl.editMode">
+            <div class="ib title">{{ $ctrl.item.title }}</div><!--
+         --><label for="{{ $ctrl.getId($parent.$index) }}" ng-click="$ctrl.enableEditMode()" class="ib">&#9997;</label>
+        </div>
+        <div class="title-container" ng-show="$ctrl.editMode">
+            <input ng-model="$ctrl.item.title" id="{{ $ctrl.getId($parent.$index) }}" class="ib title" placeholder="title..."><!--
+         --><button ng-click="$ctrl.disableEditMode()" type="button" class="ib">&#10003;</button>
+        </div>
+        <label class="description-container">
+            <textarea ng-model="$ctrl.item.description" placeholder="edit task..."></textarea>
+        </label>
+    </div><!--
+ --><button type="button" ng-click="$ctrl.removeTask($parent.$index)">X</button>
+</div>

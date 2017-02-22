@@ -1,0 +1,34 @@
+{
+  "name": "selector-alias",
+  "version": "1.0.0",
+  "homepage": "https://github.com/html5crew/selector-alias",
+  "authors": [
+    "Ryan (Choi Seong-Rak) <ryan.c@daumkakao.com>"
+  ],
+  "description": "Short alias for querySelectorAll, jQuery and Sizzle",
+  "main": "selector-alias.js",
+  "keywords": [
+    "selector",
+    "querySelectorAll"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "*_spec.js",
+    "karma.conf.js",
+    "package.json",
+    "Gruntfile.js",
+    "README.md"
+  ],
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.0",
+    "commit": "b301cfb7e5b509ac0199fbdaea53bb782eb52bfd"
+  },
+  "_source": "https://github.com/html5crew/selector-alias.git",
+  "_target": "^1.0.0",
+  "_originalSource": "selector-alias"
+}

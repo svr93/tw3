@@ -1,0 +1,42 @@
+
+
+.task-list-item {
+
+    --base-height: 25px;
+    --base-border: 1px solid gray;
+
+    margin-bottom: 5px;
+}
+.task-list-item.translucent {
+
+    opacity: 0.33;
+}
+.task-list-item > .main-container > .title-container > .title {
+
+    width: 250px;
+    height: var(--base-height);
+    border: var(--base-border);
+    box-sizing: border-box;
+}
+.task-list-item > .main-container > .title-container > button,
+.task-list-item > .main-container > .title-container > label {
+
+    height: var(--base-height);
+    width: var(--base-height);
+    border: var(--base-border);
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+}
+.task-list-item > .main-container > .description-container {
+
+    display: block;
+    width: calc(250px + var(--base-height));
+    min-height: var(--base-height);
+}
+.task-list-item > .main-container > .description-container > textarea {
+
+    resize: vertical;
+    width: 100%;
+    box-sizing: border-box;
+}
