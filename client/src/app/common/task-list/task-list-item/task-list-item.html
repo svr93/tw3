@@ -14,5 +14,6 @@
         <label class="description-container">
             <textarea ng-model="$ctrl.item.description" placeholder="edit task..."></textarea>
         </label>
-    </div>
+    </div><!--
+ --><button type="button" ng-click="$ctrl.removeTask($parent.$index)">X</button>
 </div>

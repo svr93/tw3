@@ -24,5 +24,10 @@ define([
         this._$scope.$emit('resort')
     }
 
+    Controller.prototype.removeTask = function(index) {
+
+        this._$scope.$emit('remove', index)
+    }
+
     return [ '$scope', Controller ]
 })

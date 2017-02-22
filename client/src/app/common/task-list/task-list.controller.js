@@ -7,6 +7,7 @@ define([
 
         const filter = $filter('orderBy')
         $scope.$on('resort', () => this.list = filter(this.list, '-title'))
+        $scope.$on('remove', (_, index) => this.list.splice(index, 1))
     }
 
     Controller.prototype.addTask = function() {
