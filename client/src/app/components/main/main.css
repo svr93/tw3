@@ -3,3 +3,17 @@
 .main {
 
 }
+
+.ib {
+
+    display: inline-block;
+    vertical-align: top;
+}
+
+label {
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

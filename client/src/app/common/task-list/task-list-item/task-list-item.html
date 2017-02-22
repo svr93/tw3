@@ -1,1 +1,10 @@
-<div>task-item</div>
+<div class="task-list-item">
+    <div class="title-container" ng-show="!$ctrl.editMode">
+        <div class="ib title">{{ $ctrl.title }}</div><!--
+     --><label for="{{ $ctrl.getId($parent.$index) }}" ng-click="$ctrl.editMode = true" class="ib">&#9997;</label>
+    </div>
+    <div class="title-container" ng-show="$ctrl.editMode">
+        <input id="{{ $ctrl.getId($parent.$index) }}" class="ib title" placeholder="title..."><!--
+     --><button ng-click="$ctrl.editMode = false" type="button" class="ib">&#10003;</button>
+    </div>
+</div>
