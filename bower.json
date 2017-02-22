@@ -1,0 +1,19 @@
+{
+  "name": "tw__wiley",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Vladimir Shamsheev"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/src/vendor",
+    "test",
+    "tests"
+  ]
+}
