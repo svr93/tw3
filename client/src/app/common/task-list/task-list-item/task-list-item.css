@@ -7,15 +7,19 @@
 
     margin-bottom: 5px;
 }
-.task-list-item > .title-container > .title {
+.task-list-item.translucent {
+
+    opacity: 0.33;
+}
+.task-list-item > .main-container > .title-container > .title {
 
     width: 250px;
     height: var(--base-height);
     border: var(--base-border);
     box-sizing: border-box;
 }
-.task-list-item > .title-container > button,
-.task-list-item > .title-container > label {
+.task-list-item > .main-container > .title-container > button,
+.task-list-item > .main-container > .title-container > label {
 
     height: var(--base-height);
     width: var(--base-height);
@@ -24,13 +28,13 @@
     cursor: pointer;
     text-align: center;
 }
-.task-list-item > .description-container {
+.task-list-item > .main-container > .description-container {
 
     display: block;
     width: calc(250px + var(--base-height));
     min-height: var(--base-height);
 }
-.task-list-item > .description-container > textarea {
+.task-list-item > .main-container > .description-container > textarea {
 
     resize: vertical;
     width: 100%;
