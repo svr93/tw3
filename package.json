@@ -15,6 +15,7 @@
     "eslint-plugin-requirejs": "^3.1.1",
     "flow-bin": "^0.39.0",
     "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
     "gulp-connect": "^5.0.0",
     "gulp-if": "^2.0.2",
     "jasmine": "^2.5.3",
