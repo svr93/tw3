@@ -3,6 +3,7 @@
 /* global __dirname, console */
 /* eslint-disable no-console */
 
+const fs = require('fs')
 const path = require('path')
 const argv = require('yargs').argv
 
@@ -17,6 +18,7 @@ const cssvariables = require('postcss-css-variables')
 
 /* JS processing module list */
 const babel = require('gulp-babel')
+const babelConfig = JSON.parse(fs.readFileSync('./.babelrc'))
 
 const CLIENT_CSS_PATH = path.join(__dirname, 'client/**/*.css')
 const CLIENT_HTML_PATH = path.join(__dirname, 'client/**/*.html');
@@ -31,6 +33,7 @@ const STATIC_PORT = 8010
 gulp.task('watch', () => {
 
     gulp.watch(CLIENT_HTML_PATH, [ 'html' ])
+    gulp.watch(CLIENT_CSS_PATH, [ 'css' ])
     gulp.watch(path.join(CLIENT_JS_PATH, '**/*.js')).on('change', (evt) => {
 
         console.log(`${ evt.type }: ${ evt.path }`)
@@ -39,7 +42,10 @@ gulp.task('watch', () => {
     connect.server({
 
         root: SERVER_REL_STATIC_PATH,
-        livereload: true,
+        livereload: {
+
+            port: 30000,
+        },
         port: STATIC_PORT,
     })
 })
@@ -81,7 +87,7 @@ function processJS(src) {
         dest = path.join(SERVER_REL_JS_PATH, FILE_REL_PATH)
     }
     return gulp.src(src)
-        .pipe(gulpif(argv.babel, babel()))
+        .pipe(gulpif(argv.babel, babel(babelConfig)))
         .on('error', (err) => console.error(err.message))
         .pipe(gulp.dest(dest))
         .pipe(gulpif(WATCH, connect.reload()))

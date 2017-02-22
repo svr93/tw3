@@ -7,5 +7,6 @@
   "ignore": [
 
     "client/src/vendor/**/*.js"
-  ]
+  ],
+  "babelrc": false
 }
