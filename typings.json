@@ -1,6 +1,10 @@
 {
   "name": "tw__wiley",
-  "dependencies": {},
+  "dependencies": {
+    "angular": "registry:dt/angular#1.6.0+20170208115201",
+    "angular-ui-router": "registry:dt/angular-ui-router#1.1.5+20161222093745",
+    "bluebird": "registry:dt/bluebird#3.0.0+20161229155504"
+  },
   "globalDependencies": {
     "jasmine": "registry:dt/jasmine#2.5.0+20170207112528",
     "require": "registry:dt/require#2.1.20+20160919185614"
