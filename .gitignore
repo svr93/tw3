@@ -1,0 +1,7 @@
+/.idea
+
+/node_modules
+/typings
+
+/client/src/vendor
+/server/www

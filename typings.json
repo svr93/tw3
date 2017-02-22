@@ -1,0 +1,8 @@
+{
+  "name": "tw__wiley",
+  "dependencies": {},
+  "globalDependencies": {
+    "jasmine": "registry:dt/jasmine#2.5.0+20170207112528",
+    "require": "registry:dt/require#2.1.20+20160919185614"
+  }
+}
