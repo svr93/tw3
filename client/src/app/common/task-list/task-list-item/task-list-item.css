@@ -24,3 +24,15 @@
     cursor: pointer;
     text-align: center;
 }
+.task-list-item > .description-container {
+
+    display: block;
+    width: calc(250px + var(--base-height));
+    min-height: var(--base-height);
+}
+.task-list-item > .description-container > textarea {
+
+    resize: vertical;
+    width: 100%;
+    box-sizing: border-box;
+}
