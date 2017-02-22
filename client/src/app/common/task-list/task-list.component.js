@@ -9,6 +9,6 @@ define([
 
         template: template,
         controller: Controller,
-        bindings: { list: '<', params: '<' },
+        bindings: { list: '=', params: '<' },
     })
 })
