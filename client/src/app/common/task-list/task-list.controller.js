@@ -3,8 +3,10 @@ define([
 ], () => {
     "use strict";
 
-    function Controller() {
+    function Controller($scope, $filter) {
 
+        const filter = $filter('orderBy')
+        $scope.$on('resort', () => this.list = filter(this.list, '-title'))
     }
 
     Controller.prototype.addTask = function() {
@@ -15,5 +17,5 @@ define([
         })
     }
 
-    return [ Controller ]
+    return [ '$scope', '$filter', Controller ]
 })

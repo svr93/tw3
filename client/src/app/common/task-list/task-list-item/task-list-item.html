@@ -1,11 +1,11 @@
 <div class="task-list-item">
     <div class="title-container" ng-show="!$ctrl.editMode">
         <div class="ib title">{{ $ctrl.item.title }}</div><!--
-     --><label for="{{ $ctrl.getId($parent.$index) }}" ng-click="$ctrl.editMode = true" class="ib">&#9997;</label>
+     --><label for="{{ $ctrl.getId($parent.$index) }}" ng-click="$ctrl.enableEditMode()" class="ib">&#9997;</label>
     </div>
     <div class="title-container" ng-show="$ctrl.editMode">
         <input ng-model="$ctrl.item.title" id="{{ $ctrl.getId($parent.$index) }}" class="ib title" placeholder="title..."><!--
-     --><button ng-click="$ctrl.editMode = false" type="button" class="ib">&#10003;</button>
+     --><button ng-click="$ctrl.disableEditMode()" type="button" class="ib">&#10003;</button>
     </div>
     <label class="description-container">
         <textarea ng-model="$ctrl.item.description" placeholder="edit task..."></textarea>
