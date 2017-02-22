@@ -2,12 +2,13 @@ define([
 
     'angular',
     'angular-ui-router',
+    'angular-local-forage',
     './main.component',
-], (angular, uiRouter, Component) => {
+], (angular, uiRouter, localForage, Component) => {
     "use strict";
 
     const module = angular
-        .module('main', [ uiRouter ])
+        .module('main', [ uiRouter, localForage ])
         .config([ '$stateProvider', ($sP) => {
 
             $sP.state('main', {

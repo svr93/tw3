@@ -8,6 +8,8 @@ window.requirejs = {
         'angular': 'vendor/angular/angular.min',
         '_angular-ui-router': 'vendor/angular-ui-router/release/angular-ui-router.min',
         '_ui-router-extras': 'vendor/ui-router-extras/release/ct-ui-router-extras.min',
+        'localforage': 'vendor/localforage/dist/localforage.min',
+        '_local-forage': 'vendor/angular-localforage/dist/angular-localForage.min',
 
         'text': 'vendor/text/text',
 
@@ -24,6 +26,10 @@ window.requirejs = {
         '_ui-router-extras': {
 
             deps: [ '_angular-ui-router' ],
+        },
+        '_local-forage': {
+
+            deps: [ 'angular' ],
         },
         'selector-alias': { exports: 'Selector' },
     },
